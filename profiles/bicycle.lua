@@ -1,4 +1,5 @@
 -- Bicycle profile
+-- based in https://github.com/Project-OSRM/osrm-backend/blob/v5.2.6/profiles/bicycle.lua
 
 local find_access_tag = require("lib/access").find_access_tag
 local limit = require("lib/maxspeed").limit
@@ -19,12 +20,12 @@ local walking_speed = 6
 
 bicycle_speeds = {
   ["cycleway"] = default_speed,
-  ["primary"] = default_speed,
-  ["primary_link"] = default_speed,
-  ["secondary"] = default_speed,
-  ["secondary_link"] = default_speed,
-  ["tertiary"] = default_speed,
-  ["tertiary_link"] = default_speed,
+  ["primary"] = default_speed * 0.5,
+  ["primary_link"] = default_speed * 0.6,
+  ["secondary"] = default_speed * 0.6,
+  ["secondary_link"] = default_speed * 0.7,
+  ["tertiary"] = default_speed * 0.7,
+  ["tertiary_link"] = default_speed * 0.8,
   ["residential"] = default_speed,
   ["unclassified"] = default_speed,
   ["living_street"] = default_speed,
